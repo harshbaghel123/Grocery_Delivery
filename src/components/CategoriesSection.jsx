@@ -1,58 +1,55 @@
-import React from "react"
+import React from "react";
+
 const CategoriesSection = () => {
+
   const categories = [
     {
       id: 1,
       name: "Dairy Products",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      icon: "🥛",
-
-      iconBg: "bg-green-100"
+      image: "https://cdn-icons-png.flaticon.com/512/1046/1046849.png"
     },
     {
       id: 2,
       name: "Vegetables & Fruits",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      icon: "🥕",
-
-      iconBg: "bg-orange-100"
+      image: "https://cdn-icons-png.flaticon.com/512/2909/2909765.png"
     },
     {
       id: 3,
       name: "Spices & Seasonings",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      icon: "🧂",
-
-      iconBg: "bg-yellow-100"
+      image: "https://cdn-icons-png.flaticon.com/512/3174/3174880.png"
     },
     {
       id: 4,
       name: "Honey",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      icon: "🍯",
-
-      iconBg: "bg-amber-100"
+      image: "https://cdn-icons-png.flaticon.com/512/2755/2755406.png"
     },
     {
       id: 5,
       name: "Flour",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      icon: "🌾",
-      iconBg: "bg-red-100"
+      image: "https://cdn-icons-png.flaticon.com/512/1046/1046857.png"
     }
   ];
 
   return (
-    <section className="py-16 bg-background">
+    <section className="bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`${category.bgColor} rounded-2xl p-6 cursor-pointer group`}
+              className="bg-white rounded-2xl p-6 cursor-pointer group  hover:shadow-xl transition"
             >
-              <div className={`${category.iconBg} w-16 h-16 rounded-2xl flex items-center justify-center mb-4`}>
-                <span className="text-2xl">{category.icon}</span>
+              <div className="w-24 h-24 rounded-2xl mb-4 overflow-hidden">
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 {category.name}
@@ -67,4 +64,5 @@ const CategoriesSection = () => {
     </section>
   );
 };
+
 export default CategoriesSection;
