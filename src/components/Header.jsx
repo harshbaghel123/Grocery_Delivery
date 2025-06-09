@@ -3,10 +3,9 @@ import { ShoppingCart } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="w-full bg-white border-b border-border fixed top-0 z-50">
+    <header className="w-full bg-white  border-border fixed top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-
           <div className="flex items-center">
             <h1 className="text-2xl font-bold">
               <span className="text-orange-400">Finest</span>
@@ -40,10 +39,10 @@ const Header = () => {
                 0
               </span>
             </div>
-            <button className="px-4 py-2 text-coral hover:text-amber-300 transition-colors bg-amber-500 rounded-2xl">
+            <button className="px-4 py-2 text-red-400  transition-colors underline rounded-2xl">
               Sign In
             </button>
-            <button className="px-4 py-2 bg-coral hover:text-amber-500 text-coral rounded-2xl transition-colors  bg-amber-200">
+            <button className="px-4 py-2 text-white  text-coral rounded-2xl transition-colors  bg-red-400">
               Sign Up
             </button>
           </div>
